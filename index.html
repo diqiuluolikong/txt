@@ -6,14 +6,57 @@
 
     </title>
     <style type="text/css">
-        p.tooltip{
+        p .tooltip{
+            color: aquamarine;
+            position:relative;
+        }
+        p .tooltip::before{
+            /*小三角*/
+            content: "";
+            width:0;
+            height: 0;
+            border:15px solid transparent;
+            /* 三角形大小 */
+            border-right-color: black;
+            position: absolute;
+            z-index: 2;
+            left:calc(100% - 20px);
+            /* 相对位置 */
+            opacity: 0;
+            top:-10px;
+            transition: all 0.5s;
+        }
 
+        p .tooltip::after{
+            content: attr(data-t);
+            word-break: keep-all;
+            /* 换行 */
+            position: absolute;
+            padding:4px 16px;
+            /* 黑框长宽 */
+            color:#fff;
+            /* 字体颜色 */
+            background-color:#000;
+            /* 背景颜色 */
+            border:1px solid black;
+            opacity: 0;
+            top:-10px;
+            transition: all 0.5s;
+            border-radius: 20px;
+        }
+        p .tooltip:hover::before{
+            opacity: 1;
+            top:-2px;
+        }
+        p .tooltip:hover::after{
+            opacity: 1;
+            top:-2px;
         }
     </style>
 </head>
     <body>
         <p>
-            初音未来是<span class="tooltip" data-t="我老婆">虚拟人物</span>一个以声源为中心大家一起创作的。
+            <span class="tooltip" data-t="我老婆">初音未来</span>是虚拟人物。
         </p>
     </body>
 </html>
