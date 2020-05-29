@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+
+        .match_parent {
+            display: flex;
+            flex-flow: nowrap;
+        }
+
+        #menu {
+            background-color: coral;
+            margin: 10px auto;
+            height: 40px;
+            width: calc(100%)
+        }
+
+        #menu a {
+            margin: auto 20px;
+            text-align: center;
+            padding: 10px;
+            color: #424242;
+            width: calc(100%);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        #menu a:hover {
+            background-color: lightpink;
+        }
+
+        #container {
+            border: 2px solid #424242;
+            display: inline-block;
+        }
+
+        span {
+            border: 2px solid #424242;
+            background-color: #000;
+            transition: all 0.2s;
+        }
+
+        span:hover {
+            background-color: transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="match_parent">
+        <div id="menu" class="match_parent">
+            <a href="#">首页</a>
+            <a href="#">关于</a>
+            <a href="#">帮助</a>
+        </div>
+    </div>
+    <div id="container">
+        <h3 class="content">绊爱是YouTube上一个<span>虚拟YouTuber</span>, 自称为<span>世界第一个Virtual YouTuber</span>，YouTube频道名为A.I.Channel</h3>
+    </div>
+</body>
+</html>
