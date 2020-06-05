@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.clearfix::after{
+				content: "";
+				clear: both;
+				/* display: block; */
+				display: table;
+				width: 0;
+				height: 0;
+				font-size: 0;
+				visibility: hidden;
+			}
+			/* emmet */
+			.f{
+				/* margin:200px 500px; */
+				width: 500px;
+				/* height: 300px; */
+				border: 1px solid #000;
+			}
+			.f .s{
+				width: 50px;
+				height: 50px;
+				background: red;
+				float: left;
+			}
+			.f .s1{
+				background: red;
+			}
+			.f .s2{
+				width: 70px;
+				height: 70px;
+				background: green;
+			}
+			.f .s3{
+				width: 90px;
+				height: 90px;
+				background: blue;
+			}
+			/* 
+			 浮动
+			 	脱离常规流
+			 		该元素后面的兄弟元素和父元素会认为他消失啦。
+			 	向左或向右浮动，浮动到上一个同方向浮动元素的边缘，否则到父元素的边缘。
+				
+				一定要清除浮动
+				清除浮动的方式
+					在产生浮动元素的弟弟元素上清除浮动
+						clear both
+						      left
+							  right
+							  none
+					在产生浮动元素的父元素上添加clearfix
+						.clearfix::after{
+							content: "";
+							clear: both;
+							display: block;
+						}
+						
+						.clearfix::after{
+							content: "";
+							clear: both;
+							display: table;
+							width: 0;
+							height: 0;
+							font-size: 0;
+							visibility: hidden;
+						}
+					
+					
+			 */
+			.k{
+				width: 100px;
+				height: 100px;
+				background-color: #000;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 新闻模块 -->
+		<div class="f clearfix">
+			<div class="s s1">1</div>
+			<div class="s s2">2</div>
+			<div class="s s3">3</div>
+			<!-- <div style="clear: both;"></div> -->
+			<!-- <span style="display:block;clear: both;"></span> -->
+		</div>
+		<!-- 广告模块 -->
+		<!-- <div class="k"></div> -->
+	</body>
+</html>
